@@ -1,0 +1,198 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	background:#d2d5d6;
+	height: 100%;
+	font-family: 微软雅黑,sans-serif;
+	-webkit-font-smoothing:antialiased;
+}
+span{
+	cursor: pointer;
+}
+a{
+	text-decoration: none;
+}
+.container{
+	width: 440px;
+	height: 500px;
+	margin: 0 auto;
+	background:#eef1f2;
+	position: relative;
+	top: 50%;
+	margin-top:-250px;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0px 6px 7px #999;
+}
+.top{
+	height: 270px;
+	width: 440px;
+	left: -15px;
+	position: relative;
+	text-align: center;
+}
+.top .music-lyrics{
+	width: 100%;
+	height: 230px;
+	padding:20px 0;
+	box-sizing: content-box;
+	background-color:rgba(100,100,100,0.5);
+}
+.top .music-lyrics .lyric-view{
+	height: 230px;
+	overflow: hidden;
+}
+.top .music-lyrics ul{
+	position: relative;
+	transition: all 1s;
+	list-style-type: none;
+}
+.lyric li{
+	padding:5px 0 2px 0;
+	position: relative;
+	text-align: center;
+	color: rgba(255,255,255,0.6);
+	font-size: 12px;
+	transition: all 1s;
+}
+.lyric li.active{
+	font-size: 13px;
+	color: #fff;
+}
+.bottom{
+	height: 230px;
+	width: 400px;
+	margin:0 auto;
+}
+.content{
+	position: relative;
+	height: 120px;
+	width: 400px;
+	padding:20px 20px 10px 0;
+}
+.content .music-message{
+	display: inline-block;
+	width: 280px;
+	height: 100%;
+}
+.content .music-message p{
+	cursor: default;
+}
+.content .musicname{
+	font-weight: bold;
+	font-size: 26px;
+	color: #455569;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.content .singer{
+	font-family: bold;
+	font-size: 18px;
+	color: #455569;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+.content .record{
+	font-size: 14px;
+	color: #455569;
+	margin-top: 4px;
+}
+.content .music-fan{
+	position: absolute;
+	top: 20px;
+	right: 0;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+}
+.content .music-fan a,.content .music-fan span{
+	text-decoration: none;
+	margin-left: 10px;
+	font-size: 22px;
+}
+.content .music-fan span:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+span.colored,a.colored{color: #cdd2d7;}
+span.stared{color: #feec98}
+span.loved{color: #fe8698}
+.basebar{
+	display: block;
+	width: 100%;
+	height: 4px;
+	margin-bottom: 2px;
+	margin-top: 20px;
+	background-color: #414141;
+	position: relative;
+}
+.progressbar{
+	display: block;
+	border: none;
+	width: 0%;
+	height: 4px;
+	border-radius: 0 2px 2px 0;
+	background-color: #cdd2d7;
+}
+.controler{
+	width: 100%;
+	padding:20px 0;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.controler .play-control,.music-control{
+	display: inline-block;
+}
+.controler .play-control .btn1{
+	display: inline-block;
+	width: 38px;
+	height: 38px;
+	border-radius: 19px;
+	background: #414141;
+	color: #d9d9d9;
+	font-size: 20px;
+	text-align: center;
+	line-height: 38px;
+}
+.controler .play-control .btn2,.btn3{
+	display: inline-block;
+	width: 28px;height: 28px;
+	border-radius: 14px;
+	background: #414141;
+	color: #d9d9d9;
+	font-size: 16px;
+	text-align: center;
+	line-height: 28px;
+}
+.controler .music-control{
+	float: right;
+	line-height: 38px;
+}
+/*想实现调整音量功能，但是空间不允许
+.controler .music-control .volumnbar{
+	display: none;
+	position: relative;
+	right: -18px;
+	background-color:#fe8698;
+	width: 4px;
+	height: 50px;
+}
+.controler .music-control .volumnbar .volumn{
+	height: 50%;
+	background-color:#414141;
+}*/
+.controler .music-control span{
+	margin-left: 10px;
+	font-size: 22px;
+}
+.controler .music-control span:hover{
+	text-shadow: 1px 1px 1px #ccc;
+}
+.controler .music-control span.lyriced{color: #414141;}
+.controler .music-control span.recycled{color: #414141;}

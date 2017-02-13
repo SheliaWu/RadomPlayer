@@ -89,12 +89,12 @@ function getmusic(){
 //获取歌词
 function getlyric(){
 	var Sid=$('audio').attr('sid');
-	$.post('http://api.jirengu.com/fm/getLyric.php',{sid:Sid})
+	var Ssid=$('audio').attr('ssid');
+	$.post('http://api.jirengu.com/fm/getLyric.php',{ssid:Ssid,sid:Sid})
 	.done(function(lyr){
 		//解析歌词
 		console.log(lyr); 
 		var lyr=JSON.parse(lyr);
-		console.log(lyr);
 		//!!一般用来将后面的表达式强制转换为布尔类型的数据（boolean）
 		if(!!lyr.lyric){
 			$('.music-lyrics .lyric').empty();
@@ -107,7 +107,6 @@ function getlyric(){
 					var time=line[i].match(timeReg);//每组匹配时间，得到时间数组
 					if(!time) continue;
 					var value=line[i].replace(timeReg,"");//纯歌词
-					console.log(time);
 					for(var j in time){
 						var t=time[j].slice(1,-1).split(':');
 						var timeArr=parseInt(t[0],10)*60+parseFloat(t[1]);
